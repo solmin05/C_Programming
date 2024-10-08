@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #define SIZE 100
-int main()
-{  
+int main(){  
     int number[SIZE];
     int total = 0;
     int max, min;
