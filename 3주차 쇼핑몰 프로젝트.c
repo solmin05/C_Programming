@@ -98,8 +98,9 @@ void exec3(){
     
 }
 int main(){
+    int menu;
     while(1){
-        int menu = selectMenu();
+        menu = selectMenu();
         switch(menu){
             case 1 :
                 exec1();
