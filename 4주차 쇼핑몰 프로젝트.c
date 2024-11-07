@@ -10,7 +10,7 @@ int selectMenu(){
     scanf("%d", &menu);
     return menu;
 }
-void exec1(){
+void Recetive(){
     int op;
     int receive;
     int id;
@@ -31,7 +31,7 @@ void exec1(){
                 break;
     }
 }
-void exec2(){
+void Sale(){
     int op;
     int sale;
     int id;
@@ -53,7 +53,7 @@ void exec2(){
             
     }
 }
-void exec3(){
+void All(){
     int total =0;
     int sum_receive = 0;
     int id;
@@ -96,7 +96,7 @@ void exec3(){
     }
     
 }
-void exec4(){
+void ID(){
     
     for(int i=0;i<type;i++){
         printf("상품명 입력: ", i + 1);
@@ -108,16 +108,16 @@ int main(){
         int menu = selectMenu();
         switch(menu){
             case 1 :
-                exec1();
+                Recetive();
                 break;
             case 2 :
-                exec2();
+                Sale();
                 break;
             case 3 :
-                exec3();
+                All();
                 break;
             case 4 :
-                exec4();
+                ID();
                 break;
             case 5 :
                 return 0;
