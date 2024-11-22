@@ -1,0 +1,124 @@
+#include <stdio.h>
+
+int type = 5;
+int total_receive[100] = {0};
+int total_sale[100] = {0};
+char name[5][500];
+int ids;
+int i;
+int selectMenu(){
+    int menu;
+    printf("\n원하는 메뉴를 선택하세요.(1.입고,2.판매,3.상품현황,4.상품명 입력, 5.종료)\n>");
+    scanf("%d", &menu);
+    return menu;
+}
+void Recetive(){
+    int receive;
+    int price;
+   printf("상품ID : ");
+   scanf("%d", &ids);
+   
+   for(i = 0; i<5;i++){
+        if(i[i][0] == ids && i[i][0] != 0){
+            printf("입고량 : ");
+            scanf("%d", &receive);
+            i[i][1] += receive;
+            printf("판매가격 : ");
+            i[i][3] == price;
+            
+            break;
+            
+        } 
+        else if(i[i][0] == 0){
+            printf("상품명 : ");
+            scanf("%s", &name[i]);
+            printf("입고량 : ");
+            scanf("%d", &receive);
+            i[i][1] += receive;
+            printf("판매가격 : ");
+            i[i][3] == price;
+            
+            break;
+        }
+        if(i == 5){
+            printf("상품 개수가 초과되었습니다");
+        }   
+        }
+   }
+   
+}
+void Sale(){
+    int sale;
+    printf("상품 ID : ");
+    scanf("%d", &ids);
+    for(i = 0; i<5; i++){
+        printf("상품 ID : ");
+        scanf("%d", &sale);
+        ids[i][2] = sale;
+    }
+}
+void All(){
+    int total =0;
+    int sum_receive = 0;
+    int most = 0;
+    int min = total_sale[0];
+    printf("재고 수량 : ");
+    for(int i = 0; i <type; i++){
+        printf("%d ", total_receive[i] - total_sale[i]);
+    }
+    printf("\n총 판매량: ");
+    for(int i = 0; i < type; i++){
+        total += total_sale[i];
+        sum_receive += total_receive[i];
+    }
+    printf("%d (판매율 %.2f%%)", total, ((double)total/sum_receive) * 100);
+    
+    printf("\n가장 많이 판매된 상품: ID ");
+    for(int i = 0; i < type; i++){
+        if(most < total_sale[i]){
+            id = i+1; 
+            most = total_sale[i];
+            
+        }
+    }
+    printf("%d, 상품명: %s , 판매량 %d", id, name[id - 1], most);
+    printf("\n가장 적게 판매된 상품: ID ");
+    
+    for(int i = 0; i < type; i++){
+        if(min > total_sale[i]){
+            id = i+1;
+            min = total_sale[i];
+            
+        }
+    }
+    printf("%d, 상품명: %s , 판매량 %d", id, name[id - 1], min);
+    for(int i =0; i < type; i++){
+        if(total_receive[i] - total_sale[i] <= 2){
+            printf("\n상품 ID %d : 상품명 : %s 재고부족(%d)", i+1, name[id - 1], total_receive[i] - total_sale[i]);
+        }
+    }
+    
+}
+
+int main(){
+    while(1){
+        int menu = selectMenu();
+        switch(menu){
+            case 1 :
+                Recetive();
+                break;
+            case 2 :
+                Sale();
+                break;
+            case 3 :
+                All();
+                break;
+            case 4 :
+                ID();
+                break;
+            case 5 :
+                return 0;
+        }
+    }
+
+}
