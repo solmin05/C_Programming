@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 #define SIZE 100
+
 typedef struct point{
     int x;
     int y;
