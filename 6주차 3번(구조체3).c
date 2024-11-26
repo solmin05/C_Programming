@@ -6,12 +6,12 @@ typedef struct point{
 } POINT;
 
 typedef struct{
-    POINT center;       //원의 중심
-    double radius;      //반지름
+    POINT center;      
+    double radius;      
 }CIRCLE;
 typedef struct rect{
-    POINT lb;           //left bottom
-    POINT rt;           //right top 
+    POINT lb;           
+    POINT rt;           
 }RECT;
 
 double dist(POINT p1, struct point p2){
