@@ -11,6 +11,7 @@ int main(){
     FILE* fp;
     
     if((fp = fopen("output.txt", "w")) == NULL){
+                   //^ 파일 이름   ^파일 열기 모드
         printf("error.....");
         return 0;
     }
